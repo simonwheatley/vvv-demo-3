@@ -11,7 +11,7 @@ mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON vvv_demo_3.* TO wp@loc
 if [ ! -d htdocs ]
 then
 	echo "Checking out WordPress SVN"
-	svn checkout http://svn.automattic.com/wordpress/branches/3.7/ htdocs
+	svn checkout http://svn.automattic.com/wordpress/trunk/ htdocs
 	cd htdocs
 	wp core config --dbname="vvv_demo_3" --dbuser=wp --dbpass=wp --dbhost="localhost"
 	cd ..
